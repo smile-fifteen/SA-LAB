@@ -1,0 +1,572 @@
+{
+	"html-raw": {
+		"prefix": "html-raw",
+		"body": [
+			"<html>",
+			"    <head>",
+			"        <title>Hello</title>",
+			"    </head>",
+			"    <body>",
+			"        <div>Hello World!</div>",
+			"    </body>",
+			"</html>"
+		],
+		"description": "html-raw"
+	},
+	"html-js": {
+		"prefix": "html-js",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html>",
+			"",
+			"<head>",
+			"    <title>Demo</title>",
+			"</head>",
+			"",
+			"<body>",
+			"",
+			"",
+			"    <p id=\"demo\"></p>",
+			"",
+			"    <script>",
+			"        document.getElementById(\"demo\").innerHTML =",
+			"            \"Hello World\"",
+			"    </script>",
+			"",
+			"</body>",
+			"",
+			"</html>"
+		],
+		"description": "html-js"
+	},
+	"html-init": {
+		"prefix": "html-init",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\">",
+			"  <head>",
+			"    <meta charset=\"utf-8\" />",
+			"    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />",
+			"    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\" />",
+			"    <script src=\"https://cdn.jsdelivr.net/npm/vue/dist/vue.js\"></script>",
+			"",
+			"    <title>Vue App</title>",
+			"  </head>",
+			"",
+			"  <body>",
+			"    <div id=\"app\"></div>",
+			"  </body>",
+			"</html>"
+		],
+		"description": "html-init"
+	},
+	"body-vue": {
+		"prefix": "body-vue",
+		"body": [
+			"<body>",
+			"    <div id=\"app\">{{message}}</div>",
+			"",
+			"    <script>",
+			"      const App = new Vue({",
+			"        el: '#app',",
+			"        data: {",
+			"          message: 'Hello Vue!',",
+			"        },",
+			"      })",
+			"    </script>",
+			"</body>"
+		],
+		"description": "body-vue"
+	},
+	"component-example": {
+		"prefix": "component-example",
+		"body": [
+			"<template>",
+			"  <div>",
+			"    <h3>Example</h3>",
+			"  </div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"  name: \"example\"",
+			"};",
+			"</script>",
+			"",
+			"<style scoped></style>"
+		],
+		"description": "example component"
+	},
+	"component-employee-table": {
+		"prefix": "component-employee-table",
+		"body": [
+			"<template>",
+			"  <div id=\"employee-table\">",
+			"    <table>",
+			"      <thead>",
+			"        <tr>",
+			"          <th>Employee name</th>",
+			"          <th>Employee role</th>",
+			"        </tr>",
+			"      </thead>",
+			"      <tbody>",
+			"        <tr>",
+			"          <td>Richard Hendricks</td>",
+			"          <td>CEO</td>",
+			"        </tr>",
+			"        <tr>",
+			"          <td>Bertram Gilfoyle</td>",
+			"          <td>COO</td>",
+			"        </tr>",
+			"        <tr>",
+			"          <td>Dinesh Chugtai</td>",
+			"          <td>CTO</td>",
+			"        </tr>",
+			"      </tbody>",
+			"    </table>",
+			"  </div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"  name: \"employee-table\"",
+			"};",
+			"</script>",
+			"",
+			"<style scoped></style>"
+		],
+		"description": "component-employee-table"
+	},
+	"stylesheet": {
+		"prefix": "stylesheet",
+		"body": [
+			"<link rel=\"stylesheet\" href=\"https://unpkg.com/primitive-ui/dist/css/main.css\" />"
+		],
+		"description": "stylesheet"
+	},
+	"refactor-data": {
+		"prefix": "refactor-data",
+		"body": [
+			"data() {",
+			"    return {",
+			"      employees: [",
+			"        {",
+			"          id: 1,",
+			"          name: 'Richard Hendricks',",
+			"          role: 'CEO',",
+			"        },",
+			"        {",
+			"          id: 2,",
+			"          name: 'Bertram Gilfoyle',",
+			"          role: 'COO',",
+			"        },",
+			"        {",
+			"          id: 3,",
+			"          name: 'Dinesh Chugtai',",
+			"          role: 'CTO',",
+			"        },",
+			"      ],",
+			"    }",
+			"  },"
+		],
+		"description": "refactor-data"
+	},
+	"refactor-props": {
+		"prefix": "refactor-props",
+		"body": [
+			"props: {",
+			"    employees: Array,",
+			"  },"
+		],
+		"description": "refactor-props"
+	},
+	"refactor-tr": {
+		"prefix": "refactor-tr",
+		"body": [
+			" <tr v-for=\"employee in employees\" :key=\"employee.id\">",
+			"          <td>{{ employee.name }}</td>",
+			"          <td>{{ employee.role }}</td>",
+			"</tr>"
+		],
+		"description": "refactor-tr"
+	},
+	"component-employee-form": {
+		"prefix": "component-employee-form",
+		"body": [
+			"<template>",
+			"  <div id=\"employee-form\">",
+			"    <form>",
+			"      <label>Employee name</label>",
+			"      <input type=\"text\" />",
+			"      <label>Employee role</label>",
+			"      <input type=\"text\" />",
+			"      <button>Add Employee</button>",
+			"    </form>",
+			"  </div>",
+			"</template>",
+			"",
+			"<script>",
+			"  export default {",
+			"    name: 'employee-form',",
+			"    data() {",
+			"      return {",
+			"        employee: {",
+			"          name: '',",
+			"          role: '',",
+			"        },",
+			"      }",
+			"    },",
+			"  }",
+			"</script>",
+			"",
+			"<style scoped>",
+			"  form {",
+			"    margin-bottom: 2rem;",
+			"  }",
+			"</style>"
+		],
+		"description": "component-employee-form"
+	},
+	"app-style": {
+		"prefix": "app-style",
+		"body": [
+			"",
+			"<style>",
+			"  button {",
+			"    background: #009435;",
+			"    border: 1px solid #009435;",
+			"  }",
+			"",
+			"  .small-container {",
+			"    max-width: 680px;",
+			"  }",
+			"</style>"
+		],
+		"description": "app-style"
+	},
+	"method-handlesubmit": {
+		"prefix": "method-handlesubmit",
+		"body": [
+			"methods: {",
+			"    handleSubmit() {",
+			"      console.log('testing handleSubmit')",
+			"    },",
+			"},"
+		],
+		"description": "method-handlesubmit"
+	},
+	"method-emit": {
+		"prefix": "method-emit",
+		"body": [
+			"methods: {",
+			"    handleSubmit() {",
+			"      console.log('testing handleSubmit')",
+			"      this.$$emit('add:employee', this.employee)",
+			"    },",
+			"},"
+		],
+		"description": "method-emit"
+	},
+	"method-addEmployee": {
+		"prefix": "method-addEmployee",
+		"body": [
+			"methods: {",
+			"  addEmployee(employee) {",
+			"    this.employees = [...this.employees, employee]",
+			"  }",
+			"}"
+		],
+		"description": "method-addEmployee"
+	},
+	"method-addEmployeeWithID": {
+		"prefix": "method-addEmployeeWithID",
+		"body": [
+			"addEmployee(employee) {",
+			"  const lastId =",
+			"    this.employees.length > 0",
+			"      ? this.employees[this.employees.length - 1].id",
+			"      : 0;",
+			"  const id = lastId + 1;",
+			"  const newEmployee = { ...employee, id };",
+			"",
+			"  this.employees = [...this.employees, newEmployee];",
+			"}"
+		],
+		"description": "method-addEmployeeWithID"
+	},
+	"vm-form": {
+		"prefix": "vm-form",
+		"body": [
+			"computed: {",
+			"  invalidName() {",
+			"    return this.employee.name === ''",
+			"  },",
+			"",
+			"  invalidRole() {",
+			"    return this.employee.role === ''",
+			"  },",
+			"},",
+			"data() {",
+			"  return {",
+			"    submitting: false,",
+			"    error: false,",
+			"    success: false,",
+			"    employee: {",
+			"      name: '',",
+			"      role: '',",
+			"    }",
+			"  }",
+			"},",
+			"methods: {",
+			"  handleSubmit() {",
+			"    this.submitting = true",
+			"    this.clearStatus()",
+			"",
+			"    if (this.invalidName || this.invalidRole) {",
+			"      this.error = true",
+			"      return",
+			"    }",
+			"",
+			"    this.$$emit('add:employee', this.employee)",
+			"    this.employee = {",
+			"      name: '',",
+			"      role: '',",
+			"    }",
+			"    this.error = false",
+			"    this.success = true",
+			"    this.submitting = false",
+			"  },",
+			"",
+			"  clearStatus() {",
+			"    this.success = false",
+			"    this.error = false",
+			"  }",
+			"}",
+			""
+		],
+		"description": "vm-form"
+	},
+	"style-form": {
+		"prefix": "style-form",
+		"body": [
+			"<style scoped>",
+			"  form {",
+			"    margin-bottom: 2rem;",
+			"  }",
+			"",
+			"  [class*='-message'] {",
+			"    font-weight: 500;",
+			"  }",
+			"",
+			"  .error-message {",
+			"    color: #d33c40;",
+			"  }",
+			"",
+			"  .success-message {",
+			"    color: #32a95d;",
+			"  }",
+			"</style>"
+		],
+		"description": "style-form"
+	},
+	"template-form": {
+		"prefix": "template-form",
+		"body": [
+			"<form v-on:submit.prevent=\"handleSubmit\">",
+			"  <label>Employee name</label>",
+			"  <input",
+			"    type=\"text\"",
+			"    v-bind:class=\"{ 'has-error': submitting && invalidName }\"",
+			"    v-model=\"employee.name\"",
+			"    v-on:focus=\"clearStatus\"",
+			"    v-on:keypress=\"clearStatus\"",
+			"  />",
+			"  <label>Employee Role</label>",
+			"  <input",
+			"    type=\"text\"",
+			"    v-bind:class=\"{ 'has-error': submitting && invalidRole }\"",
+			"    v-model=\"employee.role\"",
+			"    v-on:focus=\"clearStatus\"",
+			"  />",
+			"  <p v-if=\"error && submitting\" class=\"error-message\">",
+			"    ❗Please fill out all required fields",
+			"  </p>",
+			"  <p v-if=\"success\" class=\"success-message\">",
+			"    ✅ Employee successfully added",
+			"  </p>",
+			"  <button>Add Employee</button>",
+			"</form>"
+		],
+		"description": "template-form"
+	},
+	"table-button": {
+		"prefix": "table-button",
+		"body": [
+			"<td>",
+			"            <button>Edit</button>",
+			"            <button v-on:click=\"$$emit('delete:employee', employee.id)\">Delete</button>",
+			"</td>"
+		],
+		"description": "table-button"
+	},
+	"table-style": {
+		"prefix": "table-style",
+		"body": [
+			"<style scoped>",
+			"  button {",
+			"    margin: 0 0.5rem 0 0;",
+			"  }",
+			"</style>"
+		],
+		"description": "table-style"
+	},
+	"app-table": {
+		"prefix": "app-table",
+		"body": [
+			"<employee-table v-bind:employees=\"employees\" v-on:delete:employee=\"deleteEmployee\" />",
+			""
+		],
+		"description": "app-table"
+	},
+	"app-delete-method": {
+		"prefix": "app-delete-method",
+		"body": [
+			"deleteEmployee(id) {",
+			"    this.employees = this.employees.filter(",
+			"      employee => employee.id !== id",
+			"    )",
+			"}"
+		],
+		"description": "app-delete-method"
+	},
+	"table-empty": {
+		"prefix": "table-empty",
+		"body": [
+			"<p v-if=\"employees.length < 1\" class=\"empty-table\">",
+			"    No employees",
+			"</p>",
+			"<table v-else>"
+		],
+		"description": "table-empty"
+	},
+	"table-button-edit": {
+		"prefix": "table-button-edit",
+		"body": [
+			"<button v-on:click=\"editMode(employee.id)\">Edit</button>",
+			""
+		],
+		"description": "table-button-edit"
+	},
+	"table-vm-edit": {
+		"prefix": "table-vm-edit",
+		"body": [
+			"data() {",
+			"  return {",
+			"    editing: null,",
+			"  }",
+			"},",
+			"methods: {",
+			"  editMode(id) {",
+			"    this.editing = id",
+			"  }",
+			"}"
+		],
+		"description": "table-vm-edit"
+	},
+	"table-template-edit": {
+		"prefix": "table-template-edit",
+		"body": [
+			"<tr v-for=\"employee in employees\" v-bind:key=\"employee.id\">",
+			"  <td v-if=\"editing === employee.id\">",
+			"    <input type=\"text\" v-model=\"employee.name\" />",
+			"  </td>",
+			"  <td v-else>{{employee.name}}</td>",
+			"  <td v-if=\"editing === employee.id\">",
+			"    <input type=\"text\" v-model=\"employee.role\" />",
+			"  </td>",
+			"  <td v-else>{{employee.role}}</td>",
+			"  <td v-if=\"editing === employee.id\">",
+			"    <button v-on:click=\"editEmployee(employee)\">Save</button>",
+			"    <button class=\"muted-button\" v-on:click=\"editing = null\">Cancel</button>",
+			"  </td>",
+			"  <td v-else>",
+			"    <button v-on:click=\"editMode(employee.id)\">Edit</button>",
+			"    <button v-on:click=\"$emit('delete:employee', employee.id)\">Delete</button>",
+			"  </td>",
+			"</tr>"
+		],
+		"description": "table-template-edit"
+	},
+	"table-method-edit": {
+		"prefix": "table-method-edit",
+		"body": [
+			" editEmployee(employee) {",
+			"    if (employee.name === '' || employee.role === '') return",
+			"    this.$$emit('edit:employee', employee.id, employee)",
+			"    this.editing = null",
+			" }"
+		],
+		"description": "table-method-edit"
+	},
+	"app-table-edit": {
+		"prefix": "app-table-edit",
+		"body": [
+			"<employee-table",
+			"  v-bind:employees=\"employees\"",
+			"  v-on:delete:employee=\"deleteEmployee\"",
+			"  v-on:edit:employee=\"editEmployee\"",
+			"/>"
+		],
+		"description": "app-table-edit"
+	},
+	"app-edit-method": {
+		"prefix": "app-edit-method",
+		"body": [
+			"editEmployee(id, updatedEmployee) {",
+			"  this.employees = this.employees.map(employee =>",
+			"    employee.id === id ? updatedEmployee : employee",
+			"  )",
+			"}"
+		],
+		"description": "app-edit-method"
+	},
+	"table-method-right": {
+		"prefix": "table-method-right",
+		"body": [
+			"editMode(employee) {",
+			"  this.cachedEmployee = Object.assign({}, employee)",
+			"  this.editing = employee.id",
+			"},",
+			"cancelEdit(employee) {",
+			"  Object.assign(employee, this.cachedEmployee)",
+			"  this.editing = null;",
+			"}"
+		],
+		"description": "table-method-right"
+	},
+	"app-fetch": {
+		"prefix": "app-fetch",
+		"body": [
+			"",
+			"    async getEmployees() {",
+			"      try {",
+			"        const response = await fetch(\"http://localhost:8083/employees\");",
+			"        const data = await response.json();",
+			"        this.employees = data._embedded.employees;",
+			"      } catch (error) {",
+			"        console.error(error);",
+			"      }",
+			"    }"
+		],
+		"description": "app-fetch"
+	},
+	"app-mount": {
+		"prefix": "app-mount",
+		"body": [
+			"mounted() {",
+			"    this.getEmployees();",
+			"  },"
+		],
+		"description": "app-mount"
+	}
+}
